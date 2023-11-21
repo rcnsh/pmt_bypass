@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "pmt-bypass",
+  "version": "1.0",
+  "description": "Bypass PMT ads.",
+  "permissions": [
+    "tabs",
+    "webNavigation"
+  ],
+  "icons": {
+    "48": "icons/pmt-48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.physicsandmathstutor.com/*"
+      ],
+      "js": [
+        "index.js"
+      ]
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{b6ab2234-b262-4ed9-98db-5abe92dab4e8}"
+    }
+  }
+}
